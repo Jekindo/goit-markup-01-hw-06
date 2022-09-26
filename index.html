@@ -433,20 +433,29 @@
                 </div>
 
                 <!-- Newsletter -->
-				<form class="newsletter-form" name="newsletter_form">
-						<div class="newsletter-group" role="group" aria-labelledby="newsletter-group-title">
-							<h2 class="footer-title" id="newsletter-group-title">Подпишитесь на рассылку</h2>
-							<!-- Email -->
-							<input class="newsletter-input" type="email" name="mail" placeholder="E-mail">
-							<!-- Подписаться -->
-							<button class="newsletter-button" type="submit">
-								Подписаться
-								<svg class="newsletter-button-icon" width="24" height="24">
-									<use href="./images/icons/svg-sprite-optimized.svg#icon-send"></use>
-								</svg>
-							</button>
-						</div>
-				</form>
+                <form class="newsletter-form" name="newsletter_form">
+                    <div
+                        class="newsletter-group"
+                        role="group"
+                        aria-labelledby="newsletter-group-title">
+                        <h2 class="footer-title" id="newsletter-group-title">
+                            Подпишитесь на рассылку
+                        </h2>
+                        <!-- Email -->
+                        <input
+                            class="newsletter-input"
+                            type="email"
+                            name="mail"
+                            placeholder="E-mail" />
+                        <!-- Подписаться -->
+                        <button class="newsletter-button" type="submit">
+                            Подписаться
+                            <svg class="newsletter-button-icon" width="24" height="24">
+                                <use href="./images/icons/svg-sprite-optimized.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
             </div>
         </footer>
 
@@ -458,48 +467,53 @@
                         <use href="./images/icons/svg-sprite-optimized.svg#icon-close"></use>
                     </svg>
                 </button>
+
                 <!-- Form -->
-                <form class="modal-form" name="order_form" autocomplete="on">
-                    <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
-
-                    <div class="form-field">
-                        <label class="form-label" for="name">Имя</label>
-                        <input
-                            class="form-input"
-                            type="text"
-                            name="name"
-                            id="name"
-                            autocomplete="name" />
-                    </div>
-
-                    <div class="form-field">
-                        <label class="form-label" for="tel">Телефон</label>
-                        <input class="form-input" type="tel" name="tel" id="tel" />
-                    </div>
-
-                    <div class="form-field">
-                        <label class="form-label" for="email">Почта</label>
-                        <input class="form-input" type="email" name="email" id="email" />
-                    </div>
-
-                    <div class="form-field">
-                        <label class="form-label" for="comment">Комментарий</label>
+                <form class="modal-form" name="order_form">
+                    <p class="modal-form-title">Оставьте свои данные, мы вам перезвоним</p>
+                    <!-- Имя -->
+                    <label class="modal-form-field">
+                        <span class="modal-form-label">Имя</span>
+                        <input class="modal-form-input" type="text" name="name" />
+                        <svg class="modal-form-icon">
+                            <use href="./images/icons/svg-sprite-optimized.svg#icon-person"></use>
+                        </svg>
+                    </label>
+                    <!-- Телефон -->
+                    <label class="modal-form-field">
+                        <span class="modal-form-label">Телефон</span>
+                        <input class="modal-form-input" type="tel" name="tel" />
+                        <svg class="modal-form-icon">
+                            <use href="./images/icons/svg-sprite-optimized.svg#icon-phone"></use>
+                        </svg>
+                    </label>
+                    <!-- Почта-->
+                    <label class="modal-form-field">
+                        <span class="modal-form-label">Почта</span>
+                        <input class="modal-form-input" type="email" name="mail" />
+                        <svg class="modal-form-icon">
+                            <use
+                                href="./images/icons/svg-sprite-optimized.svg#icon-form-email"></use>
+                        </svg>
+                    </label>
+                    <!-- Комментарий -->
+                    <label class="modal-form-field">
+                        <span class="modal-form-label">Комментарий</span>
                         <textarea
-                            class="form-comment"
+                            class="modal-form-placeholder"
                             name="comment"
-                            id="comment"
                             placeholder="Введите текст"></textarea>
-                    </div>
-
-                    <div class="form-policy">
-                        <input class="policy-input" type="checkbox" name="policy" id="policy" />
-                        <label class="policy-label" for="policy">
-                            Соглашаюсь с рассылкой и принимаю
-                            <a class="policy-link" href="">Условия договора</a>
-                        </label>
-                    </div>
-
-                    <button class="form-button" type="submit">Отправить</button>
+                    </label>
+                    <!-- Условия договора -->
+                    <label class="modal-form-policy">
+                        <input type="checkbox" name="policy" />
+                        <span class="policy-label">
+							Соглашаюсь с рассылкой и принимаю
+                            <a href="" class="policy-link">Условия договора</a>
+						</span>
+                    </label>
+					<!-- Отправить -->
+					<button class="modal-form-btn" type="submit">Отправить</button>
                 </form>
             </div>
         </div>
