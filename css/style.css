@@ -848,8 +848,8 @@ ul {
     top: 8px;
     right: 8px;
 
-	transition: color 250ms var(--timing-function);
-	
+    transition: color 250ms var(--timing-function);
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -873,7 +873,7 @@ ul {
 }
 
 .modal-close-btn:hover {
-	color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 /* Modal form */
@@ -981,10 +981,11 @@ ul {
 
 /* Policy */
 .modal-form-policy {
-    display: inline-flex;
-    align-items: center;
+	position: relative;
+	
     margin-top: 20px;
     margin-bottom: 30px;
+	padding-left: 24px;
 
     cursor: pointer;
 }
@@ -996,68 +997,83 @@ ul {
     appearance: none;
 }
 
+/* Policy icon */
+
 .policy-icon {
+	position: absolute;
+	top: 50%;
+	left: 0;
+
+	transform: translateY(-50%);
+	transition: background-color 250ms var(--timing-function),
+				fill 250ms var(--timing-function);
+	
     width: 16px;
-    height: 16px;
-    margin-right: 8px;
+    height: 15px;
 
-    transition-property: background-color, fill;
-    transition-duration: 250ms;
-    transition-timing-function: var(--timing-function);
+	border: 2px solid var(--modal-icon-color);
+	border-radius: 2px;
 
-    border: 2px solid var(--primary-black-color);
-    border-radius: 4px;
-
-    fill: none;
+	fill: none;
+	background-color: var(--primary-white-color);
 }
 
+/* Checked */
+
 .policy-checkbox:checked + .policy-icon {
-    background-color: var(--accent-color);
-    border: none;
-    fill: var(--primary-white-color);
+	border: none;
+	background-color: var(--accent-color);
+	fill: var(--primary-white-color);
 }
 
 .policy-checkbox:checked ~ .policy-label {
-    color: var(--accent-color);
+	color: var(--accent-color);
 }
 
+
+/* Focused */
+
+.policy-checkbox:focus + .policy-icon {
+	border-color: var(--accent-color);
+}
+
+
 .policy-label {
-    transition: color 250ms var(--timing-function);
+	transition: color 250ms var(--timing-function);
+	
+	line-height: 1.71;
 }
 
 .policy-link {
     color: var(--accent-color);
 }
 
+
 /* Button */
+
 .modal-form-btn {
     padding: 10px 55px;
 
-	transition: box-shadow 250ms var(--timing-function),
-	background-color 250ms var(--timing-function);
-	
-	border: none;
+    transition: box-shadow 250ms var(--timing-function),
+       			background-color 250ms var(--timing-function);
+
+    border: none;
     border-radius: 4px;
-	
+
     background-color: #2196f3;
-	color: var(--primary-white-color);
-	cursor: pointer;
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 1.88;
-	letter-spacing: 0.06em;
+    color: var(--primary-white-color);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
 }
 
 .modal-form-btn:hover,
 .modal-form-btn:focus {
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	background-color: var(--button-hover-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: var(--button-hover-color);
 }
-
-
-
-
-
 
 /*!  PORTFOLIO */
 .portfolio .section-title {
